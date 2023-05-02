@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Category, SubCategory, Magazine
+from .models import Category, SubCategory, Magazine, Comment
 
 class MagazineSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,3 +15,8 @@ class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SubCategory
         fields = ["name", "slug"]
+
+class commentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ["name", "magazineId","text","email"]

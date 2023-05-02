@@ -2,7 +2,7 @@ import axios, * as others from "axios";
 import Head from "next/head";
 import { Fragment } from "react";
 import MagazineDetailComponent from "../../../components/magazines/magazine-detail";
-import MagazieItem from "../../../components/magazines/magazine-item";
+import Comments from "../../../components/input/comment/comments";
 export default function MagazineDetailPage(props) {
   const magazine = props.magazine;
 
@@ -20,6 +20,7 @@ export default function MagazineDetailPage(props) {
         title={magazine.title}
         content={magazine.content}
       />
+      <Comments magazineId={magazine.id} />
     </Fragment>
   );
 }

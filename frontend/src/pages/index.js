@@ -5,15 +5,15 @@ import PortfolioList from "../../components/portfolio/portfolio-list";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto rounded-lg ">
-      <div className="hero text-center">
+    <div className="mx-auto rounded-lg ">
+      <div className="hero mt-20 text-center">
         <div className="intro my-10">
           <Image
-            src="/next.svg"
-            width="20"
-            height="20"
+            src="/marmar.jpg"
+            width="100"
+            height="100"
             alt="twitter"
-            className="rounded mx-auto "
+            className="mx-auto rounded-full "
           />
           <h1 className="text-3xl font-bold mt-6">
             Software engineer, Fullstack Developer
@@ -46,64 +46,64 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="wallpapers  mt-16 sm:mt:20">
-        <div className="flex justify-center gap-5">
-          <div className="rounded overflow-hidden rotate-2 w-44">
+      <div className="wallpapers  mt-16 sm:mt:20 w-screen ml-[calc(-1*((100vw-100%)/2))]">
+        <div className="flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+          <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl  sm:w-72 sm:rounded-2xl rotate-2">
             <Image
               src="/1.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="absolute inset-0 h-full w-full object-cover"
               alt="portfolio"
             />
           </div>
-          <div className="rounded overflow-hidden -rotate-2 w-44">
+          <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl -rotate-2">
             <Image
               src="/1.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="absolute inset-0 h-full w-full object-cover"
               alt="portfolio"
             />
           </div>
-          <div className="rounded overflow-hidden rotate-2 w-44">
+          <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-2">
             <Image
               src="/4.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="absolute inset-0 h-full w-full object-cover"
               alt="portfolio"
             />
           </div>
-          <div className="rounded overflow-hidden rotate-2 w-44">
+          <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl  sm:w-72 sm:rounded-2xl rotate-2">
             <Image
               src="/4.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="absolute inset-0 h-full w-full object-cover"
               alt="portfolio"
             />
           </div>
-          <div className="rounded overflow-hidden -rotate-2 w-44">
+          <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl  sm:w-72 sm:rounded-2xl -rotate-2">
             <Image
               src="/4.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-auto"
+              className="absolute inset-0 h-full w-full object-cover"
               alt="portfolio"
             />
           </div>
         </div>
       </div>
-      <div className="mt-20">
+      <div className="skills mt-20 ">
         <SkillList />
       </div>
-      <div className="mt-20">
+      <div className="mt-20 ">
         <PortfolioList />
       </div>
     </div>

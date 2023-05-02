@@ -20,9 +20,15 @@ class Magazine(models.Model):
     subcategory_id = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     slug = models.CharField(max_length=200)
-    meta_title = models.CharField(max_length=200)
-    meta_description = models.CharField(max_length=200)
+    meta_title = models.CharField(max_length=200,default='')
+    meta_description = models.CharField(max_length=200,default='')
     description = models.CharField(max_length=1000,default='')
-    content= models.TextField()
+    content= models.TextField(default='')
     created_at = models.DateTimeField('date created')
     updated_at = models.DateTimeField('date updated')
+
+class Comment(models.Model):
+    magazine_id=models.ForeignKey(Magazine,on_delete=models.CASCADE)
+    email= models.CharField(max_length=200)
+    name= models.CharField(max_length=500)
+    text= models.TextField(default='')
